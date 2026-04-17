@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frrdback Form</title>
+    <title>Feedback Form</title>
 </head>
 <body>
-    <form action="">
-        <label for="Comments"><b>Comments:</b></label><br>
-        <textarea id="Message" maxlength="100" rows="5" cols="50" placeholder="Comment your Experiences:" ></textarea>
-        <b>Rating:</b><br>
-        <select required>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
+    <form action="/submit-feedback" method="POST">
+        <label for="Message"><b>Comments:</b></label><br>
+        <textarea id="Message" name="user_message" maxlength="100" rows="5" cols="50" placeholder="Comment your experiences:"></textarea>
+        
+        <br><br>
+
+        <label for="Rating"><b>Rating:</b></label><br>
+        <select id="Rating" name="user_rating" required>
+            <option value="" disabled selected>Select a rating</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
         </select>
+
+        <br><br>
+
+        <button type="submit">Submit Feedback</button>
     </form>
 </body>
 </html>
