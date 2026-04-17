@@ -7,11 +7,11 @@
 </head>
 <body style="text-align: center; background-color:rgb(248, 191, 191); color:aliceblue" topmargin="100px">
     <form action="";style="text-align: center;">
-    <b>Name</b><br>
-    <input type="text" id="name" placeholder="Name" required pattern="[A-Z]"
-    ><br><br>
+    <b>User Name:</b><br>
+    <input type="text" name="username" id="name" placeholder="Name" minlength="3" maxlength="50" pattern="[A-Za-z0-9_!@#$%^&*()-+*/]{3,50}" title="Username must be 3-15 characters long and contain only letters and numbers."required>
+    <br><br>
     <b>Password</b><br>
-    <input type="password" id="password" placeholder="Password"><br><br>
+    <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one Uppercase and Lowwercase letter,and at leadt 8 or more characters"><br><br>
     <input type="reset"  value="Cancel">
     <input type="submit"  value="Login">
     </form>

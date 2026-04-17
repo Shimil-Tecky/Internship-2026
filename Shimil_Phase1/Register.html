@@ -9,16 +9,17 @@
 
     <form action="" style="text-align: center;">
     <b>Name:</b>
-    <input type="text" placeholder="Name" id="name"><br><br>
+    <input type="text" name="username" id="name" placeholder="Name" minlength="3" maxlength="50" pattern="[A-Za-z0-9_!@#$%^&*()-+*/]{3,50}" title="Username must be 3-15 characters long and contain only letters and numbers."required>
+    <br><br>
     <b>Email ID:</b>
     <input type="email" placeholder="Email" id="email"><br><br>
     <b>Password</b>
-    <input type="password" placeholder="Password" id="password"><br><br>
+    <input type="password" placeholder="Password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one Uppercase and Lowwercase letter,and at leadt 8 or more characters"><br><br>
     <b>Gender</b>
     <input type="radio" name="Gender" id="gender">Male
     <input type="radio" name="Gender" id="gender">Female<br><br>
     <b>Hobbies</b>
-    <input type="text" placeholder="Hobbies" id="Hobbies"><br><br>
+    <textarea id="hobbies" placeholder="Hobbies" id="Hobbies"></textarea><br><br>
     <input type="submit" name="action" value="Save">
     
    </form>
