@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
 </head>
-<body>
-    <form action="/submit-feedback" method="POST">
+<body style="background-color: rgb(52, 52, 52); color:aliceblue">
+    <div style="text-align:center">
+    <form action="">
         <label for="Message"><b>Comments:</b></label><br>
-        <textarea id="Message" name="user_message" maxlength="100" rows="5" cols="50" placeholder="Comment your experiences:"></textarea>
+        <textarea id="Message" name="user_message" rows="5" cols="50" placeholder="Comment your experiences:" pattern="[A-Za-z0-9_!@#$%^&*()-+*/]{3,100}" title="Must enter your feedback"required></textarea>
         
         <br><br>
 
         <label for="Rating"><b>Rating:</b></label><br>
         <select id="Rating" name="user_rating" required>
             <option value="" disabled selected>Select a rating</option>
-            <option value="1">1 - Poor</option>
-            <option value="2">2 - Fair</option>
-            <option value="3">3 - Good</option>
-            <option value="4">4 - Very Good</option>
-            <option value="5">5 - Excellent</option>
+            <option value="1">☆</option>
+            <option value="2">☆☆</option>
+            <option value="3">☆☆☆</option>
+            <option value="4">☆☆☆☆</option>
+            <option value="5">☆☆☆☆☆</option>
         </select>
 
         <br><br>
 
-        <button type="submit">Submit Feedback</button>
+        <button type="submit">Submit</button>
     </form>
+    </div>
 </body>
 </html>
