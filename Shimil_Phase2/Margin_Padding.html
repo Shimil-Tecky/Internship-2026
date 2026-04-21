@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin vs Padding Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .example {
+            margin-bottom: 40px;
+        }
+
+        .example h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Example 1: Padding Only */
+        .padding-only {
+            background-color: #e3f2fd;
+            padding: 50px;
+            border: 2px solid #1976d2;
+        }
+
+        /* Example 2: Margin Only */
+        .margin-only {
+            background-color: #f3e5f5;
+            margin: 50px;
+            border: 2px solid #7b1fa2;
+        }
+
+        /* Example 3: Both Margin and Padding */
+        .both {
+            background-color: #fff3e0;
+            margin: 50px;
+            padding: 50px;
+            border: 2px solid #f57c00;
+        }
+
+        .explanation {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Margin vs Padding Examples</h1>
+
+    <div class="example">
+        <h2>Example 1: Padding Only</h2>
+        <div class="padding-only">
+            This box has 50px padding (space inside the border, around the text).
+        </div>
+        <p class="explanation">Padding adds space INSIDE the element, between content and border.</p>
+    </div>
+
+    <div class="example">
+        <h2>Example 2: Margin Only</h2>
+        <div class="margin-only">
+            This box has 50px margin (space outside the border, between other elements).
+        </div>
+        <p class="explanation">Margin adds space OUTSIDE the element, between this box and other elements.</p>
+    </div>
+
+    <div class="example">
+        <h2>Example 3: Both Margin and Padding</h2>
+        <div class="both">
+            This box has 50px margin AND 50px padding combined.
+        </div>
+        <p class="explanation">Margin creates external spacing, while padding creates internal spacing.</p>
+    </div>
+
+</body>
+</html>
