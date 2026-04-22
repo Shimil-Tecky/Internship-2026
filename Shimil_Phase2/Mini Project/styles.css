@@ -43,6 +43,11 @@ body {
     color: #007bff;
     letter-spacing: 1px;
 }
+.logo img{
+    width: 60px;
+    height: auto;
+    display: block;
+}
 
 .nav-links {
     display: flex;
@@ -69,6 +74,15 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url(./Img/hippie.png);
+        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .header-content h1 {
@@ -118,17 +132,17 @@ h2 {
 }
 
 .product-image {
-    height: 300px; /* Adjust height as needed */
+    height: 300px; 
     overflow: hidden;
     border-radius: 8px;
     margin-bottom: 20px;
-    background: #f0f0f0; /* Fallback color */
+    background: #f0f0f0; 
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This crops the image to fill the space without stretching */
+    object-fit: cover; 
     display: block;
 }
 
@@ -189,12 +203,77 @@ h2 {
     color: #fff;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Mobile menu logic would go here */
+/* --- Responsive Media Queries --- */
+
+/* Tablet Styles (max-width: 992px) */
+@media (max-width: 992px) {
+    .header-content h1 {
+        font-size: 2.8rem;
     }
     
-    .hero-content h1 {
+    .container {
+        max-width: 90%;
+    }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        position:fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 5vh;
+    }
+
+    .navbar .container {
+        flex-direction: row;
+        gap: 1px;
+        padding: 0;
+    }
+
+    .nav-links {
+        padding: 0;
+    }
+
+    .nav-links li a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    .logo {
         font-size: 2.5rem;
+    }
+
+    .headerbar {
+        height: 60vh; 
+    }
+
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .service-grid, .product-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    section {
+        padding: 50px 0;
+    }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .nav-links li a {
+        margin: 0 5px;
+        font-size: 0.8rem;
     }
 }
