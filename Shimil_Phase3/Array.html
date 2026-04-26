@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Display</title>
+</head>
+<body>
+    <h1>Array of Items</h1>
+    <div id="arrayDisplay"></div>
+    <script>
+        let items = ["Apple", "Banana", "Cherry", "Date"];
+        let display = document.getElementById("arrayDisplay");
+        display.innerHTML = "<ol>" + items.map(item => "<li>" + item + "</li>").join("") + "</ol>";
+    </script>
+</body>
+</html>
