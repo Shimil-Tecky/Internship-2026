@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even</title>
+
+    <style>
+
+        body{
+            background-color: black;
+            margin-top: 90px;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 400px;
+            height: 300px;
+            padding: 20px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 0, 0);
+        }
+        h1{
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        button{
+            width: 170px;
+            background-color: rgb(0, 0, 0);
+            border: 2px solid rgb(255, 255, 255);
+            padding: 12px 28px;
+            border: none;
+            font-size: 15px;
+            border-radius: 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        button:hover{
+            background-color: rgb(253, 0, 0);
+            color: white;
+        }
+
+        input{
+            width: 170px;
+            display: flex;
+            height: 40px;
+            text-align: center;
+            border-radius: 20px;
+            padding: 12px;
+            margin-left: 100px;
+        }
+        </style>
+
+</head>
+<body>
+   <div class="container">
+    <h1>CHECK ODD OR EVEN</h1> 
+    <input type="number" required placeholder="Enter a Number " id="inp">
+    <br>
+    <button type="button" onclick="Check()">Click to Check</button>
+    <h1 id="output"></h1>
+   </div>
+
+   <script>
+    function Check(){
+        var num=Number(document.getElementById("inp").value)
+
+        if(num===0){
+            document.getElementById("output").innerHTML="Entered number is ZERO"
+        }else if(num%2==0){
+            document.getElementById("output").innerHTML="Entered number is EVEN"
+        }else{
+            document.getElementById("output").innerHTML="Entered number is ODD"
+        }
+    }
+</script>
+
+</body>
+</html>
