@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; 
+        
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #121212;
+        color: aliceblue;
+    }
+
+    .title {
+        width: 200px;
+        padding: 40px 20px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 20px;
+        text-align: center;
+        background-color: #ffffff;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #000000;
+    }
+
+    button {
+        padding: 10px 25px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #e97b7b;
+    }
+
+    #error {
+        margin-top: 15px;
+        color: #ff4d4d;
+        font-size: 0.9rem;
+    }
+</style>
+    
+</head>
+<body>
+
+<div class="title">
+    <input type="text" id="user_name" placeholder="Enter Username">
+    <br><br>
+    <input type="password" id="password" placeholder="Enter password">
+    <br><br>
+    <button onclick="field()">login</button>  
+    <p id="error" ></p> 
+</div>
+    
+<script src="script.js"></script>
+
+</body>
+</html>
